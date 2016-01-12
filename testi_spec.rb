@@ -1,7 +1,7 @@
 require './koodi.rb'
 
 RSpec.describe 'metodi puuttuva' do
-  it "toimii tehtävämäärittelyn kuvaamalla tavalla" do
+  it "palauttaa taulukosta puuttuvan luvun" do
     method_taking_array_exists(self, :puuttuva, [1,0])
     expect(puuttuva([1,0])).to eq(2)
     expect(puuttuva([1,2])).to eq(0)

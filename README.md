@@ -6,12 +6,10 @@ Esim. parametrilla `[1,2,4,0]` metodin kuuluisi tulostaa 3.
 
 Toimi seuraavasti:
 
-asenna gemit komennolla `bundle install`
-
 kirjoita koodi tiedostoon koodi.rb
 
 suorita koodi paikallisesti komennolla `ruby koodi.rb`
 
-suorita testit komennolla `bundle exec rspec testi_spec.rb`
+suorita testit komennolla `rspec testi_spec.rb`
 
 kun testit menevät läpi, pushaa githubiin ja tee pull request
