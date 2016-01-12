@@ -2,11 +2,11 @@ require './koodi.rb'
 
 RSpec.describe 'metodi kertoma' do
   it "palauttaa parametrinsa kertoman" do
-    method_exists(self, :tulo, 1, 1)
-    expect(tulo(1, 1)).to eq(1)
-    expect(tulo(3, 2)).to eq(6)
-    expect(tulo(4, 5)).to eq(20)
-    expect(tulo(6, 10)).to eq(60)
-    expect(tulo(4, -2)).to eq(-8)
+    method_taking_array_exists(self, :puuttuva, [1,0])
+    expect(puuttuva([1,0])).to eq(2)
+    expect(puuttuva([1,2])).to eq(0)
+    expect(puuttuva([1,2,4,0])).to eq(3)
+    expect(puuttuva([1, 7, 4, 0, 2, 5, 3])).to eq(6)
+    expect(puuttuva([8, 7, 1, 4, 6, 2, 0, 3])).to eq(5)
   end
 end

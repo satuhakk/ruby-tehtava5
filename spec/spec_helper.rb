@@ -48,6 +48,21 @@ RSpec.configure do |config|
     end
   end
 
+  def method_exists(obj, method, *pars)
+    begin
+      obj.send(method, *pars)
+    rescue
+       raise "method #{method}(#{pars.join(', ')}) is not defined"
+    end
+  end
+
+  def method_taking_array_exists(obj, method, *pars)
+    begin
+      obj.send(method, *pars)
+    rescue
+       raise "method #{method}([#{pars.join(', ')}]) is not defined"
+    end
+  end
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
